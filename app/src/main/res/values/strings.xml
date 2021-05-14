@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Act03_CalculadoraAndroid</string>
+    
+    <string name="txt_pantallaCalc">0</string>
+    <string name="txt_btn_porcentaje">%</string>
+    <string name="txt_btn_raiz">√</string>
+    <string name="txt_btn_cuadrado">x^2</string>
+    <string name="txt_btn_unoX">1/x</string>
+    <string name="txt_btn_CE">CE</string>
+    <string name="txt_btn_C">C</string>
+    <string name="txt_btn_borrar">↵</string>
+    <string name="txt_btn_dividir">/</string>
+    <string name="txt_btn_num7">7</string>
+    <string name="txt_btn_num8">8</string>
+    <string name="txt_btn_num9">9</string>
+    <string name="txt_btn_num4">4</string>
+    <string name="txt_btn_num5">5</string>
+    <string name="txt_btn_num6">6</string>
+    <string name="txt_btn_num1">1</string>
+    <string name="txt_btn_num2">2</string>
+    <string name="txt_btn_num3">3</string>
+    <string name="txt_btn_num0">0</string>
+
+    <string name="txt_btn_multi">X</string>
+    <string name="txt_btn_resta">-</string>
+    <string name="txt_btn_suma">+</string>
+    <string name="txt_btn_masmenos">±</string>
+    <string name="txt_btn_punto">.</string>
+    <string name="txt_btn_igual">=</string>
+
+</resources>
