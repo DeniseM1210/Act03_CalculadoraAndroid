@@ -103,10 +103,6 @@ public class MainActivity extends AppCompatActivity {
         has_punto = false;
     }
 
-    public void btn_MasMenos(View v){
-
-    }
-
     public void btn_igual(View v){
         if(signo == null){
             pantallaCalc.setText("ERROR!");
@@ -119,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 default:
                     break;
                 case "cuadrado":
+                    valor1 = pantallaCalc.getText().toString();
                     num1 = Double.parseDouble((valor1));
                     pantallaCalc.setText(Math.pow(num1, 2) + "");
                     signo = null;
@@ -133,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     num1 = Double.parseDouble((valor1));
                     valor2 = pantallaCalc.getText().toString();
                     num2 = Double.parseDouble(valor2);
-                    resultado = (num1 * 100) / num2;
+                    resultado = (num1 * .100);
                     pantallaCalc.setText(resultado + "");
                     signo = null;
                     break;
@@ -181,20 +178,25 @@ public class MainActivity extends AppCompatActivity {
                         pantallaCalc.setText("ERROR!");
                         break;
                     }else {
-                        resultado = num1 - num2;
+                        resultado = num1 / num2;
                         pantallaCalc.setText(resultado + "");
                         signo = null;
                         break;
                     }
             }
         }
-        
     }
 
+    public void btn_CE(View v){
+        pantallaCalc.setText("");
+    }
+    public void btn_C(View v){
+        pantallaCalc.setText("");
+    }
+    public void btn_borrar(View v){
+        if (pantallaCalc.getText().toString().length()>0) {
+            pantallaCalc.setText(pantallaCalc.getText().toString().substring(0,pantallaCalc.getText().toString().length()-1));
+        }
+    }
 
-
-
-
-
-
-}
+    }

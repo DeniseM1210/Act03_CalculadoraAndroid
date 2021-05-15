@@ -121,6 +121,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="15dp"
+        android:onClick="btn_CE"
         android:text="@string/txt_btn_CE"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,6 +169,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
+        android:onClick="btn_borrar"
         android:text="@string/txt_btn_borrar"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@+id/btnC"
@@ -243,7 +245,7 @@
         android:gravity="right|center_horizontal"
         android:text="@string/txt_pantallaCalc"
         android:textColor="@color/black"
-        android:textSize="60sp"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -277,6 +279,7 @@
         android:layout_height="76dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
+        android:onClick="btn_C"
         android:text="@string/txt_btn_C"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/btnCE"
