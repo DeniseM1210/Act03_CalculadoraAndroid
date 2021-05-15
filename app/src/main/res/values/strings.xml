@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Act03_CalculadoraAndroid</string>
     
-    <string name="txt_pantallaCalc">0</string>
+    <string name="txt_pantallaCalc"></string>
     <string name="txt_btn_porcentaje">%</string>
     <string name="txt_btn_raiz">√</string>
     <string name="txt_btn_cuadrado">x^2</string>
