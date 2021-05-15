@@ -54,7 +54,144 @@ public class MainActivity extends AppCompatActivity {
         has_punto = false;
     }
 
-    
+    public void btn_Resta(View v){
+        signo = "-";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_Dividir(View v){
+        signo = "/";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_Multi(View v){
+        signo = "*";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_Porcentaje(View v){
+        signo = "%";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_Raiz(View v){
+        signo = "raiz";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_Cuadrado(View v){
+        signo = "cuadrado";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_UnoX(View v){
+        signo = "UnoX";
+        valor1 = pantallaCalc.getText().toString();
+        pantallaCalc.setText(null);
+        has_punto = false;
+    }
+
+    public void btn_MasMenos(View v){
+
+    }
+
+    public void btn_igual(View v){
+        if(signo == null){
+            pantallaCalc.setText("ERROR!");
+        }else if(pantallaCalc.getText().equals("")){
+            pantallaCalc.setText("ERROR!");
+        }else if((signo.equals("+") || signo.equals("-") || signo.equals("*") || signo.equals("/")) && valor1.equals("")){
+            pantallaCalc.setText("ERROR!");
+        }else{
+            switch (signo){
+                default:
+                    break;
+                case "cuadrado":
+                    num1 = Double.parseDouble((valor1));
+                    pantallaCalc.setText(Math.pow(num1, 2) + "");
+                    signo = null;
+                    break;
+                case "raiz":
+                    valor1 = pantallaCalc.getText().toString();
+                    num1 = Double.parseDouble((valor1));
+                    pantallaCalc.setText(Math.sqrt(num1) + "");
+                    signo = null;
+                    break;
+                case "%":
+                    num1 = Double.parseDouble((valor1));
+                    valor2 = pantallaCalc.getText().toString();
+                    num2 = Double.parseDouble(valor2);
+                    resultado = (num1 * 100) / num2;
+                    pantallaCalc.setText(resultado + "");
+                    signo = null;
+                    break;
+                case "UnoX":
+                    if(valor1.equals("0")){
+                        pantallaCalc.setText("ERROR!");
+                        break;
+                    }else{
+                        valor1 = pantallaCalc.getText().toString();
+                        num1 = Double.parseDouble((valor1));
+                        resultado = 1 / num1;
+                        pantallaCalc.setText(resultado + "");
+                        signo = null;
+                        break;
+                    }
+                case "+":
+                    valor2 = pantallaCalc.getText().toString();
+                    num1 = Double.parseDouble(valor1);
+                    num2 = Double.parseDouble(valor2);
+                    resultado = num1 + num2;
+                    pantallaCalc.setText(resultado + "");
+                    signo = null;
+                    break;
+                case "-":
+                    valor2 = pantallaCalc.getText().toString();
+                    num1 = Double.parseDouble(valor1);
+                    num2 = Double.parseDouble(valor2);
+                    resultado = num1 - num2;
+                    pantallaCalc.setText(resultado + "");
+                    signo = null;
+                    break;
+                case "*":
+                    valor2 = pantallaCalc.getText().toString();
+                    num1 = Double.parseDouble(valor1);
+                    num2 = Double.parseDouble(valor2);
+                    resultado = num1 * num2;
+                    pantallaCalc.setText(resultado + "");
+                    signo = null;
+                    break;
+                case "/":
+                    valor2 = pantallaCalc.getText().toString();
+                    num1 = Double.parseDouble(valor1);
+                    num2 = Double.parseDouble(valor2);
+                    if(valor2.equals("0")){
+                        pantallaCalc.setText("ERROR!");
+                        break;
+                    }else {
+                        resultado = num1 - num2;
+                        pantallaCalc.setText(resultado + "");
+                        signo = null;
+                        break;
+                    }
+            }
+        }
+        
+    }
+
+
 
 
 
